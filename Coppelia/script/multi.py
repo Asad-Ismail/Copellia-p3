@@ -91,7 +91,7 @@ os.system('cp ../include/constraints.h.sfONLY  ../include/constraints.h')
 os.system('verilator -O3 -Wall -language 1364-2001 --top-module or1200_cpu +incdir+../cores/or1200 -Mdir obj_dir -cc ../cores/or1200/*.v --exe tb_cpu.cpp')
 os.system('make -j -C obj_dir/ -f Vor1200_cpu.mk Vor1200_cpu')
 os.system('extract-bc -l llvm-link obj_dir/Vor1200_cpu')
-os.system('klee -coi-prune=false --search=hardware -halt-when-fired=true  -emit-all-errors --libc=uclibc -max-memory=100000000 --posix-runtime obj_dir/Vor1200_cpu.bc')
+os.system('klee -multi-cycles -coi-prune=false --search=hardware -halt-when-fired=true  -emit-all-errors --libc=uclibc -max-memory=100000000 --posix-runtime obj_dir/Vor1200_cpu.bc')
 # fast validation used in the original work produces segmentation fault
 #os.system('klee -coi-prune=false -fast-validation=true --search=hardware -halt-when-fired=true -emit-all-errors -max-memory=100000000 --libc=uclibc --posix-runtime obj_dir/Vor1200_cpu.bc')
 
@@ -157,7 +157,7 @@ while 1:
     os.system('verilator -O3 -Wall -language 1364-2001 --top-module or1200_cpu +incdir+../cores/or1200 -Mdir obj_dir -cc ../cores/or1200/*.v --exe tb_cpu.cpp')
     os.system('make -j -C obj_dir/ -f Vor1200_cpu.mk Vor1200_cpu')
     os.system('extract-bc -l llvm-link obj_dir/Vor1200_cpu')
-    os.system('klee  -coi-prune=false --search=hardware -halt-when-fired=true -emit-all-errors -max-memory=100000000 --libc=uclibc --posix-runtime obj_dir/Vor1200_cpu.bc')
+    os.system('klee -multi-cycles -coi-prune=false --search=hardware -halt-when-fired=true -emit-all-errors -max-memory=100000000 --libc=uclibc --posix-runtime obj_dir/Vor1200_cpu.bc')
     # Just test single case
     #break
 
