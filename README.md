@@ -3,7 +3,7 @@ Based on https://github.com/rzhang2285/Coppelia
 
 ## Updates
 1) Updated Copellia scripts to support python 3.x instead of 2.x
-2) Fixed klee-uclibc certificates issues
+2) Fixed klee-uclibc dependencies certificates 
 3) A Dockerfile which build all the requirements of python, llvm, clang, minisat, stp, verliator, klee-uclibc, klee ando ther useful tools to run the tool
 
 ## RUN
