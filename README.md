@@ -1,4 +1,6 @@
 # Copellia-p3
+## [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Asad-Ismail/Copellia-p3/issues) [![HitCount](http://hits.dwyl.com/Asad-Ismail/Copellia-p3.svg?style=flat-square)](http://hits.dwyl.com/Asad-Ismail/Copellia-p3)
+
 Based on https://github.com/rzhang2285/Coppelia
 
 ## Updates
